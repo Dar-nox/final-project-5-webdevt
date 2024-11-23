@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Almendra+SC&family=Charmonman:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Gugi&family=Tilt+Prism&display=swap');
+
+/* Overall Container */
+.home {
+    font-family: "Montserrat", sans-serif;
+    color: #1a1a1a;
+    background-color: #1a1a1a; /* Dark background for elegance */
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  /* Hero Image */
+  .hero-image {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  
+  .hero-pic {
+    width: 100%;
+    max-height: 475px; /* Adjust for a balanced layout */
+    object-fit: cover;
+    border-bottom: 2px solid #f5c518; /* Gold accent under the image */
+    border-top: 2px solid #f5c518; /* Gold accent under the image */
+  }
+  
+  /* Welcome Section */
+  .welcome-text {
+    font-family: "Gugi", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 36px;
+    color: #ffffff;
+    margin: 20px 0;
+  }
+  
+  .intro-text {
+    color: #ffdf6aa1;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 10px 0 30px;
+    line-height: 0.6;
+  }
+  
+  /* Dining Options Section */
+  .dining-options {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    color: #131313;
+  }
+  
+  .dining-option {
+    background-color: rgba(218, 218, 218, 0.39); /* Transparent overlay */
+    padding: 20px;
+    border-radius: 8px;
+    border-color: rgba(0, 0, 0, 0.63);
+    border-style: solid;
+    width: 80%;
+    max-width: 600px;
+    text-align: left;
+  }
+  
+  .dining-option h2 {
+    font-family: "Gugi", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .dining-option p {
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+  
