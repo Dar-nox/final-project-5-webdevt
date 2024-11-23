@@ -1,0 +1,53 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Almendra+SC&family=Charmonman:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Gugi&family=Tilt+Prism&display=swap');
+
+
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #1a1a1a; /* Elegant dark background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: fixed;
+    width: 100%;
+    border-bottom: 2px solid #f5c518; /* Gold accent under the image */
+  }
+  
+  /* Brand Name Styling */
+  .navbar-brand {
+    font-family: "Gugi", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35px;
+    margin-left: 15px;
+    color: #f5c518; /* Gold for elegance */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Links Container */
+  .navbar-links {
+    display: flex;
+    gap: 30px;
+    margin-right: 80px;
+  }
+  
+  /* Link Styling */
+  .navbar-link {
+    font-family: "Montserrat", sans-serif; /* Modern thin sans-serif font */
+    font-size: 16px;
+    font-weight: 300;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: #ffffff; /* White text for contrast */
+    padding: 8px 12px;
+    border: 1px solid transparent; /* Border for hover effect */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .navbar-link:hover {
+    color: #f5c518; /* Gold hover color */
+  }
+  
