@@ -3,53 +3,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Almendra+SC&family=Black+Ops+One&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Charmonman:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Gugi&family=Tilt+Prism&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Almendra+SC&family=Black+Ops+One&family=Bodoni+Moda:opsz,wght@6..96,700&family=Charmonman:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Gugi&family=Italiana&family=Tilt+Prism&display=swap');
 
-/* Navbar Container */
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   padding: 10px 30px;
-  background-color: #d9d9d9; /* Elegant dark background */
-  box-shadow: -10px 3px 5px rgba(0, 0, 0, 0.575); /* Enhanced bottom shadow */
+  background-color: #d9d9d9; 
+  box-shadow: -10px 3px 5px rgba(0, 0, 0, 0.575); 
   position: fixed;
   width: 100%;
   border-bottom: 5px solid #533d2d;
   z-index: 20;
 }
-  
-  /* Brand Name Styling */
+
   .navbar-brand {
     font-family: "Italiana", sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 35px;
-    margin-left: 15px;
-    color: #322d29; /* Gold for elegance */
+    margin-left: 352px;
+    color: #322d29; 
     text-transform: uppercase;
     letter-spacing: 1px;
+    border-right: 1px solid;
+    padding-right: 50px;
   }
-  
-  /* Links Container */
+
   .navbar-links {
     display: flex;
     gap: 30px;
-    margin-right: 80px;
+    margin-right: 400px;
+    padding-left: 40px;
   }
-  
-  /* Link Styling */
+
   .navbar-link {
-    font-family: "Montserrat", sans-serif; /* Modern thin sans-serif font */
+    font-family: "Montserrat", sans-serif; 
     font-size: 20px;
     font-weight: 300;
     text-decoration: none;
     letter-spacing: 1px;
-    color: #322d29; /* White text for contrast */
+    color: #322d29; 
     padding: 8px 12px;
-    border: 1px solid transparent; /* Border for hover effect */
     transition: all 0.3s ease-in-out;
   }
   
   .navbar-link:hover {
-    color: #72383d; /* Gold hover color */
+    color: #72383d; 
   }
   

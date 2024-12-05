@@ -22,7 +22,7 @@ const Home = () => {
       <div
         className="hero-image"
         style={{
-          backgroundPositionY: `${scrollY * 0.5}px`, // Adjust the scroll speed
+          backgroundPositionY: `${scrollY * 0.5}px`, // Adjust scroll speed
           backgroundImage: `url(${RESTOPIC})`,
         }}
       ></div>
