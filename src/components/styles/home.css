@@ -183,14 +183,14 @@
   }
 
 .contacts a{
-  color: #d1c7bd;
+  color: #ece6e1;
   text-decoration: none;
   font-weight: bold; 
   transition: color 0.3s ease, text-shadow 0.3s ease; 
 }
 
 .social-medias a {
-  color: #d1c7bd; 
+  color: #ece6e1; 
   text-decoration: none;
   font-weight: 300; 
   transition: color 0.3s ease, text-shadow 0.3s ease; 
