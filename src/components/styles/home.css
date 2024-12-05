@@ -206,3 +206,69 @@
 .social-medias a:hover {
   color: #ffffff; 
 }
+
+.fb-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 0px;
+}
+
+.fb-logo {
+  display: flex;
+  align-items: center;
+  width: 30px;
+  height: auto;
+  margin-right: 8px;
+}
+
+.fb-container a {
+  align-items: center;
+  padding-top: 8px;
+  display: flex;
+}
+
+.insta-container {
+  display: flex;
+  padding-top: 2px;
+  justify-content: space-between;
+  align-items: start;
+  padding-bottom: 3px;
+}
+
+.insta-logo {
+  display: flex;
+  width: 30px;
+  align-items: center;
+  height: auto;
+  margin-right: 8px;
+  margin-bottom: 4px;
+}
+
+.insta-container a {
+  display: flex;
+  align-items: center;
+  padding-top: 2px;
+  margin-top: 3px;
+}
+
+.x-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 0px;
+}
+
+.x-logo {
+  display: flex;
+  width: 24px;
+  align-items: center;
+  height: auto;
+  margin-right: 11px;
+  margin-left: 3px;
+}
+
+.x-container a {
+  align-items: center;
+  display: flex;
+}

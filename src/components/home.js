@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./styles/home.css";
 import RESTOPIC from './images/RESTOPIC3.jpeg';
+import FBlogo from './images/FB.png';
+import instalogo from './images/insta.png';
+import Xlogo from './images/X.png';
 
 const Home = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -46,9 +49,21 @@ const Home = () => {
   <div className="social-medias">
     <p>
     <span className="follow">Follow us on:<br /></span>
-    <a href="https://facebook.com/kdafinedining" target="_blank" rel="noopener noreferrer">Facebook</a><br />
-    <a href="https://instagram.com/kdafinedining" target="_blank" rel="noopener noreferrer">Instagram</a><br />
-    <a href="https://twitter.com/kdafinedining" target="_blank" rel="noopener noreferrer">Twitter</a>
+    <div className="fb-container">
+    <a href="https://facebook.com/kdafinedining" target="_blank" rel="noopener noreferrer"><div className="fb-logo-container">
+    <img src={FBlogo} alt="Placeholder" className="fb-logo" />
+    </div>Facebook</a><br />
+    </div>
+    <div className="insta-container">
+    <a href="https://instagram.com/kdafinedining" target="_blank" rel="noopener noreferrer"><div className="insta-logo-container">
+    <img src={instalogo} alt="Placeholder" className="insta-logo" />
+    </div>Instagram</a><br />
+    </div>
+    <div className="x-container">
+    <a href="https://twitter.com/kdafinedining" target="_blank" rel="noopener noreferrer"><div className="insta-logo-container">
+    <img src={Xlogo} alt="Placeholder" className="x-logo" />
+    </div>X</a><br />
+    </div>
     </p>
   </div>
 </div>
