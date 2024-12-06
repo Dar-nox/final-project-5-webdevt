@@ -26,9 +26,10 @@ const AdminPage = ({ reservations }) => {
     <div className="admin-page">
       <div className="active-reservations">
         <h2>Active Reservations</h2>
-        <table>
+        <table className="styled-table">
           <thead>
             <tr>
+              <th>ID</th>
               <th>Name</th>
               <th>Date</th>
               <th>Time</th>
@@ -38,8 +39,9 @@ const AdminPage = ({ reservations }) => {
             </tr>
           </thead>
           <tbody>
-            {activeReservations.map((res) => (
-              <tr key={res.id}>
+            {activeReservations.map((res, index) => (
+              <tr key={res.id} className={index % 2 === 0 ? "even-row" : "odd-row"}>
+                <td>{res.id}</td>
                 <td>{res.name}</td>
                 <td>{new Date(res.reservationDate).toLocaleDateString()}</td>
                 <td>{res.time}</td>
@@ -67,7 +69,7 @@ const AdminPage = ({ reservations }) => {
 
       <div className="history">
         <h2>Reservation History</h2>
-        <table>
+        <table className="styled-table">
           <thead>
             <tr>
               <th>ID</th>
@@ -77,8 +79,8 @@ const AdminPage = ({ reservations }) => {
             </tr>
           </thead>
           <tbody>
-            {history.map((res) => (
-              <tr key={res.id}>
+            {history.map((res, index) => (
+              <tr key={res.id} className={index % 2 === 0 ? "even-row" : "odd-row"}>
                 <td>{res.id}</td>
                 <td>{res.name}</td>
                 <td>{new Date(res.reservationDate).toLocaleDateString()}</td>

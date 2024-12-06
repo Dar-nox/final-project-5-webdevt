@@ -1,56 +1,66 @@
 .admin-page {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    padding-top: 80px;
-  }
-  
-  .active-reservations {
-    flex: 2;
-    margin-right: 20px;
-  }
-  
-  .history {
-    flex: 1;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  table, th, td {
-    border: 2px solid #ccc;
-  }
-  
-  th, td {
-    padding: 8px;
-    text-align: left;
-  }
-  
-  button {
-    margin-right: 10px;
-    padding: 6px 12px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .mark-done-button {
-    background-color: #2863a7;
-    color: white;
-  }
-  
-  .mark-done-button:hover {
-    background-color: #216788;
-  }
-  
-  .cancel-button {
-    background-color: #dc3545;
-    color: white;
-  }
-  
-  .cancel-button:hover {
-    background-color: #c82333;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  padding-top: 80px;
+}
+
+.active-reservations {
+  flex: 2;
+  margin-right: 20px;
+}
+
+.history {
+  flex: 1;
+}
+
+table.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table.styled-table thead {
+  background-color: #4e342e; /* Muted dark brown */
+  color: white;
+}
+
+table.styled-table th, table.styled-table td {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+table.styled-table tbody tr.even-row {
+  background-color: white;
+}
+
+table.styled-table tbody tr.odd-row {
+  background-color: #f5e4d7; /* Muted light brown */
+}
+
+button {
+  margin-right: 10px;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.mark-done-button {
+  background-color: #2863a7;
+  color: white;
+}
+
+.mark-done-button:hover {
+  background-color: #216788;
+}
+
+.cancel-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: #c82333;
+}
