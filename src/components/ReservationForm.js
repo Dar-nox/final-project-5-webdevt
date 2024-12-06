@@ -15,6 +15,7 @@ const ReservationForm = ({ addReservation }) => {
     phone: '',
     specialRequest: '',
     reservationDate: '',
+    time: '',
     partySize: '',
     mealCourse: null,
   });
@@ -27,6 +28,10 @@ const ReservationForm = ({ addReservation }) => {
       ...data,
     }));
     setStep(step + 1);
+  };
+
+  const previousStep = () => {
+    setStep(step - 1);
   };
 
   const handleConfirm = () => {
@@ -43,9 +48,18 @@ const ReservationForm = ({ addReservation }) => {
 
   return (
     <div className="reservation-form">
-      {step === 1 && <ReservationDetails nextStep={nextStep} />}
-      {step === 2 && <MealCourse nextStep={nextStep} />}
-      {step === 3 && <ContactInformation nextStep={nextStep} />}
+      {step === 1 && (
+        <ReservationDetails
+          nextStep={nextStep}
+          reservationData={reservationData} // Pass current reservation data to retain values
+        />
+      )}
+      {step === 2 && (
+        <MealCourse nextStep={nextStep} previousStep={previousStep} />
+      )}
+      {step === 3 && (
+        <ContactInformation nextStep={nextStep} previousStep={previousStep} />
+      )}
       {step === 4 && (
         <ConfirmationModal
           reservationData={reservationData}
