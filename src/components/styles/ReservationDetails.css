@@ -1,0 +1,107 @@
+    @import url('https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400;700&display=swap');
+
+    body {
+        font-family: 'Proxima Nova', sans-serif; /* Use Proxima Nova font */
+        background-color: #d1c7bd; /* Light background color */
+    }
+
+    .reservation-details {
+        display: flex;
+        height: auto; /* Full height of the viewport */
+        padding: 20px;
+    }
+
+    .calendar-section, .time-section, .party-size-section {
+        flex: 1; /* Equal width for each section */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start; /* Align items to the top */
+        margin: 10px; /* Space between sections */
+        border: 1px solid #ddd; /* Light border for separation */
+        border-radius: 8px; /* Rounded corners */
+        padding: 10px; /* Padding inside sections */
+        background-color: white; /* White background for sections */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        height: 400px; /* Shortened height for vertical rectangles */
+        margin-top: 80px;
+    }
+
+    .custom-calendar {
+        width: 100%; /* Full width */
+        height: 60%; /* Adjust height for the calendar */
+        border: none; /* Remove default border */
+    }
+
+    .section-title {
+        font-size: 20px; /* Title font size */
+        margin-bottom: 50; /* Increased space below the title */
+        font-weight: bold; /* Bold title */
+        text-align: center; /* Center align title */
+        width: 100%; /* Full width for title */
+    }
+
+    .title-divider {
+        width: 100%; /* Full width for the divider */
+        height: 2px; /* Height of the divider */
+        background-color: #ddd; /* Color of the divider */
+        margin-bottom: 10px; /* Space below the divider */
+    }
+
+    .time-buttons, .party-size-buttons {
+        display: flex;
+        flex-direction: column; /* Align buttons vertically */
+        width: 100%; /* Full width */
+    }
+
+    .time-button, .party-size-button {
+        background-color: white; /* White background */
+        color: black; /* Black text */
+        font-size: 18px; /* Larger font size */
+        padding: 15px; /* Padding for buttons */
+        margin: 5px 0; /* Space between buttons */
+        border: 1px solid black; /* Thin black border */
+        border-radius: 5px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor on hover */
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition */
+        width: 100%; /* Full width for buttons */
+    }
+
+    .time-button:hover, .party-size-button:hover {
+        background-color: #322d29; /* Black background on hover */
+        color: white; /* White text on hover */
+    }
+
+    .time-button.selected, .party-size-button.selected {
+        background-color: #322d29; /* Black background when selected */
+        color: white; /* White text when selected */
+        border-color: #000000; /* White border when selected */
+        border-width: 1px;
+        
+    }
+
+    .next-button {
+        position: absolute; /* Position at the bottom right */
+        bottom: 20px; /* Space from the bottom */
+        right: 30px; /* Space from the right */
+        background-color: #806d31; /* Green background */
+        color: #ffffff; /* White text */
+        font-size: 16px; /* Font size */
+        padding: 10px 15px; /* Padding for the button */
+        border: none; /* Remove default border */
+        border-radius: 5px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor on hover */
+        transition: background-color 0.3s; /* Smooth transition */
+    }
+
+    .next-button:hover {
+        background-color: #3d3417; /* Darker green on hover */
+    }
+
+    h2 {
+    margin-top: 10px;
+    margin-bottom: 20px; /* Adjust the value as needed */
+    font-size: 24px; /* Optional: Adjust font size */
+    font-weight: bold; /* Optional: Make the text bold */
+    text-align: center; /* Optional: Center align the text */
+    }

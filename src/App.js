@@ -1,14 +1,19 @@
-
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar';
 import Home from './components/home';
+import ReservationForm from './components/ReservationForm';
 
-function App() {
+const App = () => {
   return (
-    <><Navbar></Navbar><div>
-      <Home></Home>
-    </div></>
+    <Router>
+      <Navbar /> {/* Navbar will be displayed on all pages */}
+      <Routes>
+        <Route path="/" element={<Home />} /> {/* Home page */}
+        <Route path="/reservation" element={<ReservationForm />} /> {/* Reservation Form page */}
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

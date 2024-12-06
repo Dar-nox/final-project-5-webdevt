@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./styles/navbar.css";
 
 const Navbar = () => {
@@ -6,8 +7,8 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-brand">KDA</div>
       <div className="navbar-links">
-        <a href="#home" className="navbar-link">Home</a>
-        <a href="#reservation" className="navbar-link">Reservation</a>
+        <NavLink to="/" className="navbar-link" activeClassName="active">Home</NavLink>
+        <NavLink to="/reservation" className="navbar-link" activeClassName="active">Reservation</NavLink>
         <a href="#menu" className="navbar-link">Menu</a>
       </div>
     </nav>

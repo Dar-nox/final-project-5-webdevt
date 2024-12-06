@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400;700&display=swap');
+
+body {
+    font-family: 'Proxima Nova', sans-serif; /* Use Proxima Nova font */
+}
+
+.meal-course-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.meal-course-grid {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Arrange items in a row */
+    justify-content: space-around; /* Space between items */
+    height: 100vh; /* Full height of the viewport */
+    padding: 20px;
+}
+
+.meal-course-option {
+    display: flexbox;
+    width: 800px; /* Fixed width for rectangles */
+    height: 393px; /* Fixed height for rectangles */
+    border-radius: 12px;
+    overflow: visible;
+    transition: transform 0.3s, background-color 0.3s; /* Transition for hover effects */
+    cursor: pointer;
+    position: relative;
+    background-size: contain; /* Cover the entire area */
+    background-repeat: no-repeat;
+    background-position: top center; /* Center the image */
+    color: white; /* Text color for better visibility */
+    margin: 0 10px; /* Add margin between rectangles */
+    border: 1px solid #ddd; /* Light border for separation */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.meal-course-option:hover {
+    transform: translateY(-5px); /* Pop-up effect */
+    background-color: rgba(255, 255, 255, 0.2); /* Brighter effect on hover */
+}
+
+.course-info {
+    display: flexbox;
+    position: absolute; /* Position info over the image */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding-top: 20px;
+    padding: 10px;
+    text-align: center;
+    border-top: 4px solid #0000001f; /* Highlight selected course */
+    border-bottom: 2px solid #ddd; /* Highlight selected course */
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-right: 2px solid #ddd; /* Light border for separation */
+    border-left: 2px solid #ddd; /* Light border for separation */
+}
+
+.selected {
+    border-top: 5px solid #007bff; /* Highlight selected course */
+    border-bottom: 5px solid #007bff; /* Highlight selected course */
+}
+
+.button-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between buttons */
+    margin-top: 20px; /* Space above the button container */
+    align-items: center; /* Align buttons vertically in the center */
+}
+
+.previous-button {
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    font-size: 18px; /* Increased font size */
+    padding: 15px 30px; /* Increased padding for a larger button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.previous-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.next-button {
+    background-color: #28a745; /* Green background */
+    color: white; /* White text */
+    font-size: 18px; /* Increased font size */
+    padding: 15px 30px; /* Increased padding for a larger button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.next-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+h2 {
+    margin-top: 10px;
+    margin-bottom: 20px; /* Adjust the value as needed */
+    font-size: 24px; /* Optional: Adjust font size */
+    font-weight: bold; /* Optional: Make the text bold */
+    text-align: center; /* Optional: Center align the text */
+}
+
