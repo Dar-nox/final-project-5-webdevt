@@ -14,7 +14,7 @@ const ReservationForm = ({ addReservation }) => {
     email: '',
     phone: '',
     specialRequest: '',
-    reservationDate: '',
+    reservationDate: '', // Will be updated in ReservationDetails
     time: '',
     partySize: '',
     mealCourse: null,
