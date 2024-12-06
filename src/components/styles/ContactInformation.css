@@ -52,7 +52,7 @@ form textarea {
 form button {
     width: 100%; /* Full width button */
     padding: 15px;
-    background-color: #007bff;
+    background-color: #322d29;
     color: white;
     border: none;
     border-radius: 5px;
@@ -62,5 +62,5 @@ form button {
 }
 
 form button:hover {
-    background-color: #0056b3;
+    background-color: #585049;
 }

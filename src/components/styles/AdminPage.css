@@ -20,7 +20,7 @@
   }
   
   table, th, td {
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
   }
   
   th, td {
@@ -37,12 +37,12 @@
   }
   
   .mark-done-button {
-    background-color: #28a745;
+    background-color: #2863a7;
     color: white;
   }
   
   .mark-done-button:hover {
-    background-color: #218838;
+    background-color: #216788;
   }
   
   .cancel-button {

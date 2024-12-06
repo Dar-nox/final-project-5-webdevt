@@ -72,22 +72,25 @@ body {
 }
 
 .previous-button {
-    background-color: #007bff; /* Blue background */
+    position: absolute;
+    background-color: #440f0f; /* Blue background */
     color: white; /* White text */
     font-size: 18px; /* Increased font size */
     padding: 15px 30px; /* Increased padding for a larger button */
     border: none; /* Remove default border */
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
+    bottom: 20px; /* Space from the bottom */
+    right: 140px; /* Space from the right */
     transition: background-color 0.3s; /* Smooth transition */
 }
 
 .previous-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #472929; /* Darker blue on hover */
 }
 
 .next-button {
-    background-color: #28a745; /* Green background */
+    background-color: #322d29; /* Green background */
     color: white; /* White text */
     font-size: 18px; /* Increased font size */
     padding: 15px 30px; /* Increased padding for a larger button */
@@ -95,10 +98,12 @@ body {
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
     transition: background-color 0.3s; /* Smooth transition */
+    bottom: 20px; /* Space from the bottom */
+    right: 30px; /* Space from the right */
 }
 
 .next-button:hover {
-    background-color: #218838; /* Darker green on hover */
+    background-color: #585049; /* Darker green on hover */
 }
 
 h2 {
