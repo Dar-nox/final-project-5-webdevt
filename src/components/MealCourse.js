@@ -1,25 +1,28 @@
 import React, { useState } from 'react';
 import '../styles/MealCourse.css';
+import piccata from './images/Piccata.jpg';
+import ribs from './images/ribs.jpg';
+import salmon from './images/salmon.jpg';
 
 const mealOptions = [
     {
         id: 1,
         name: 'Course 1',
-        image: 'path/to/image1.jpg',
+        image: piccata,
         allergies: 'Nuts, Dairy',
         cost: '₱500',
     },
     {
         id: 2,
         name: 'Course 2',
-        image: 'path/to/image2.jpg',
+        image: ribs,
         allergies: 'Gluten',
         cost: '₱600',
     },
     {
         id: 3,
         name: 'Course 3',
-        image: 'path/to/image3.jpg',
+        image: salmon,
         allergies: 'Seafood',
         cost: '₱700',
     },

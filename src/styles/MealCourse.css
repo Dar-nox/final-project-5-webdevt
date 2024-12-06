@@ -19,14 +19,15 @@ body {
 
 .meal-course-option {
     width: 800px; /* Fixed width for rectangles */
-    height: 800px; /* Fixed height for rectangles */
-    border-radius: 8px; /* Rounded corners */
-    overflow: hidden;
+    height: 393px; /* Fixed height for rectangles */
+    border-radius: 12px;
+    overflow: visible;
     transition: transform 0.3s, background-color 0.3s; /* Transition for hover effects */
     cursor: pointer;
     position: relative;
-    background-size: cover; /* Cover the entire area */
-    background-position: center; /* Center the image */
+    background-size: contain; /* Cover the entire area */
+    background-repeat: no-repeat;
+    background-position: top center; /* Center the image */
     color: white; /* Text color for better visibility */
     margin: 0 10px; /* Add margin between rectangles */
     border: 1px solid #ddd; /* Light border for separation */
@@ -40,17 +41,24 @@ body {
 
 .course-info {
     position: absolute; /* Position info over the image */
-    bottom: 0; /* Align to the bottom */
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     padding-top: 20px;
     padding: 10px;
     text-align: center;
+    top: 256px;
+    border-top: 4px solid #0000001f; /* Highlight selected course */
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-right: 2px solid #ddd; /* Light border for separation */
+    border-left: 2px solid #ddd; /* Light border for separation */
+    z-index: -3;
 }
 
 .selected {
-    border: 2px solid #007bff; /* Highlight selected course */
+    border-top: 5px solid #007bff; /* Highlight selected course */
+    border-bottom: 5px solid #007bff; /* Highlight selected course */
 }
 
 .button-container {
