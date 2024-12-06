@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './styles/ContactInformation.css';
 
 const ContactInformation = ({ nextStep }) => {
     const [name, setName] = useState('');
@@ -25,7 +26,8 @@ const ContactInformation = ({ nextStep }) => {
     };
 
     return (
-        <form onSubmit={handleNext}>
+        <div className="form-container">
+<form onSubmit={handleNext}>
             <h2>Contact Information</h2>
             <label>
                 Name:
@@ -63,6 +65,7 @@ const ContactInformation = ({ nextStep }) => {
             </label>
             <button type="submit">Next</button>
         </form>
+        </div>
     );
 };
 

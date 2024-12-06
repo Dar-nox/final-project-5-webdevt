@@ -6,21 +6,22 @@ body {
 
 .meal-course-container {
     text-align: center;
-    margin: 20px;
+    background-color: #e9e3dd;
 }
 
 .meal-course-grid {
     display: flex; /* Use flexbox for layout */
+    margin-top: 50px;
     flex-direction: row; /* Arrange items in a row */
     justify-content: space-around; /* Space between items */
-    height: 100vh; /* Full height of the viewport */
+    height: auto; /* Full height of the viewport */
     padding: 20px;
 }
 
 .meal-course-option {
     display: flexbox;
     width: 800px; /* Fixed width for rectangles */
-    height: 393px; /* Fixed height for rectangles */
+    height: 417px; /* Fixed height for rectangles */
     border-radius: 12px;
     overflow: visible;
     transition: transform 0.3s, background-color 0.3s; /* Transition for hover effects */
@@ -50,12 +51,12 @@ body {
     padding-top: 20px;
     padding: 10px;
     text-align: center;
-    border-top: 4px solid #0000001f; /* Highlight selected course */
-    border-bottom: 2px solid #ddd; /* Highlight selected course */
+    border-top: 4px solid #ffffff; /* Highlight selected course */
+    border-bottom: 2px solid #ffffff; /* Highlight selected course */
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
-    border-right: 2px solid #ddd; /* Light border for separation */
-    border-left: 2px solid #ddd; /* Light border for separation */
+    border-right: 2px solid #ffffff; /* Light border for separation */
+    border-left: 2px solid #ffffff; /* Light border for separation */
 }
 
 .selected {
@@ -101,8 +102,8 @@ body {
 }
 
 h2 {
-    margin-top: 10px;
-    margin-bottom: 20px; /* Adjust the value as needed */
+    margin-top: 0px;
+    margin-bottom: 0px; /* Adjust the value as needed */
     font-size: 24px; /* Optional: Adjust font size */
     font-weight: bold; /* Optional: Make the text bold */
     text-align: center; /* Optional: Center align the text */

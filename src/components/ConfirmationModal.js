@@ -5,6 +5,7 @@ const ConfirmationModal = ({ reservationData, onConfirm, onEdit }) => {
   if (!reservationData) return null;
 
   return (
+    <div className="modal-container">
     <div className="confirmation-modal">
       <div className="modal-content">
         <h2>Confirm Your Reservation</h2>
@@ -20,6 +21,7 @@ const ConfirmationModal = ({ reservationData, onConfirm, onEdit }) => {
           <button onClick={onEdit} className="edit-button">Edit</button>
         </div>
       </div>
+    </div>
     </div>
   );
 };

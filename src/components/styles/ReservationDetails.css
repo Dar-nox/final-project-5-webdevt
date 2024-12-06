@@ -2,7 +2,7 @@
 
     body {
         font-family: 'Proxima Nova', sans-serif; /* Use Proxima Nova font */
-        background-color: #d1c7bd; /* Light background color */
+        background-color: #e9e3dd; /* Light background color */
     }
 
     .reservation-details {
@@ -21,7 +21,7 @@
         border: 1px solid #ddd; /* Light border for separation */
         border-radius: 8px; /* Rounded corners */
         padding: 10px; /* Padding inside sections */
-        background-color: white; /* White background for sections */
+        background-color: #ffffff; /* White background for sections */
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
         height: 400px; /* Shortened height for vertical rectangles */
         margin-top: 80px;
