@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // For navigation
+import { useNavigate } from 'react-router-dom'; 
 import ContactInformation from './ContactInformation';
 import ReservationDetails from './ReservationDetails';
 import MealCourse from './MealCourse';
@@ -8,19 +8,18 @@ import './styles/ReservationForm.css';
 
 const ReservationForm = ({ addReservation }) => {
   const [step, setStep] = useState(1);
-  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [reservationData, setReservationData] = useState({
     name: '',
     email: '',
     phone: '',
     specialRequest: '',
-    reservationDate: '', // Will be updated in ReservationDetails
+    reservationDate: '',
     time: '',
     partySize: '',
     mealCourse: null,
   });
 
-  const navigate = useNavigate(); // Initialize navigation
+  const navigate = useNavigate(); 
 
   const nextStep = (data) => {
     setReservationData((prevState) => ({
@@ -35,15 +34,14 @@ const ReservationForm = ({ addReservation }) => {
   };
 
   const handleConfirm = () => {
-    addReservation(reservationData); // Pass reservation data to the parent
-    setShowSuccessMessage(true); // Show success message
+    addReservation(reservationData);
     setTimeout(() => {
-      navigate('/'); // Redirect to the homepage after 3 seconds
-    }, 1000);
+      navigate('/'); 
+    }, 1);
   };
 
   const handleEdit = () => {
-    setStep(1); // Restart the form if editing is needed
+    setStep(1);
   };
 
   return (
@@ -51,7 +49,7 @@ const ReservationForm = ({ addReservation }) => {
       {step === 1 && (
         <ReservationDetails
           nextStep={nextStep}
-          reservationData={reservationData} // Pass current reservation data to retain values
+          reservationData={reservationData}
         />
       )}
       {step === 2 && (
@@ -68,13 +66,7 @@ const ReservationForm = ({ addReservation }) => {
         />
       )}
 
-      {/* Success message after confirmation */}
-      {showSuccessMessage && (
-        <div className="success-message">
-          <h2>Reservation Successful!</h2>
-          <p>Your reservation has been confirmed. Redirecting to the homepage...</p>
-        </div>
-      )}
+
     </div>
   );
 };

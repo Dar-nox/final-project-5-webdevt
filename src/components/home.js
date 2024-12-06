@@ -22,7 +22,7 @@ const Home = () => {
 
   return (
     <div className="home">
-      {/* Parallax Hero Section */}
+
       <div
         className="hero-image"
         style={{
@@ -31,7 +31,6 @@ const Home = () => {
         }}
       ></div>
 
-      {/* Content Section */}
       <div className="home-content">
         <h1 className="welcome-text">KDA Fine Dining</h1>
         <NavLink to="/reservation" className="navbar-link" activeClassName="active"><button className="reserve-btn">Reserve</button></NavLink>

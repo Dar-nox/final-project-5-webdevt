@@ -6,10 +6,10 @@ const Login = ({ onAdminLogin, showLogin }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onAdminLogin(username, password); // Authenticate user
+    onAdminLogin(username, password); 
   };
 
-  if (!showLogin) return null; // Don't render the login form if showLogin is false
+  if (!showLogin) return null;
 
   return (
     <div className="login-container">

@@ -1,29 +1,27 @@
-/* Font Import */
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap');
 
-/* Center the form horizontally and vertically */
+
 .form-container {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    min-height: calc(100vh - 80px); /* Full viewport height minus the navbar height */
-    padding-top: 100px; /* Space below the navbar */
-    padding-bottom: 35px;;
+    justify-content: center;
+    align-items: center; 
+    min-height: calc(100vh - 80px); 
+    padding-top: 100px; 
+    padding-bottom: 35px;
 }
 
-/* Style the form */
 form {
     background: #fefefe;
-    padding: 40px; /* Equal padding on all sides */
+    padding: 40px; 
     border-radius: 10px;
     max-width: 600px;
-    width: 100%; /* Make sure it doesn't exceed max-width */
+    width: 100%; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     font-family: 'Roboto', sans-serif;
-    box-sizing: border-box; /* Ensure padding is included in the total width */
+    box-sizing: border-box; 
 }
 
-/* Center and style form labels and inputs */
 form label {
     display: block;
     margin-bottom: 10px;
@@ -34,23 +32,22 @@ form label {
 
 form input,
 form textarea {
-    width: 100%; /* Full width inside the form */
+    width: 100%; 
     padding: 10px;
-    margin-bottom: 20px; /* Space between inputs */
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
-    box-sizing: border-box; /* Include padding in width calculation */
+    box-sizing: border-box; 
 }
 
 form textarea {
-    resize: none; /* Prevent resizing */
-    height: 100px; /* Set a default height */
+    resize: none;
+    height: 100px; 
 }
 
-/* Style the submit button */
 form button {
-    width: 100%; /* Full width button */
+    width: 100%;
     padding: 15px;
     background-color: #322d29;
     color: white;
