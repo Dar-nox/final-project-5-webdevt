@@ -4,6 +4,7 @@ import RESTOPIC from './images/RESTOPIC3.jpeg';
 import FBlogo from './images/FB.png';
 import instalogo from './images/insta.png';
 import Xlogo from './images/X.png';
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -33,7 +34,7 @@ const Home = () => {
       {/* Content Section */}
       <div className="home-content">
         <h1 className="welcome-text">KDA Fine Dining</h1>
-        <button className="reserve-btn">Reserve</button>
+        <NavLink to="/reservation" className="navbar-link" activeClassName="active"><button className="reserve-btn">Reserve</button></NavLink>
         <h2 className="small-description">"An unforgettable dining experience crafted with excellence and elegance."</h2>
         <div className="footer-box">
           <div className="footer">
