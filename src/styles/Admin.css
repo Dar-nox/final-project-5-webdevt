@@ -1,0 +1,45 @@
+/* Admin Styles */
+.admin {
+  padding: 20px;
+}
+
+.admin h2 {
+  margin-bottom: 20px;
+}
+
+.admin ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.admin li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.admin button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.admin button:hover {
+  background-color: darkred;
+}
+
+.admin-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-actions input {
+  padding: 5px;
+  margin-right: 10px;
+}
