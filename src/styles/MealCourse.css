@@ -18,6 +18,7 @@ body {
 }
 
 .meal-course-option {
+    display: flexbox;
     width: 800px; /* Fixed width for rectangles */
     height: 393px; /* Fixed height for rectangles */
     border-radius: 12px;
@@ -40,20 +41,21 @@ body {
 }
 
 .course-info {
+    display: flexbox;
     position: absolute; /* Position info over the image */
+    bottom: 0;
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     padding-top: 20px;
     padding: 10px;
     text-align: center;
-    top: 256px;
     border-top: 4px solid #0000001f; /* Highlight selected course */
+    border-bottom: 2px solid #ddd; /* Highlight selected course */
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
     border-right: 2px solid #ddd; /* Light border for separation */
     border-left: 2px solid #ddd; /* Light border for separation */
-    z-index: -3;
 }
 
 .selected {
