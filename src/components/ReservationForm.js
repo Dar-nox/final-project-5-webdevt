@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // For navigation
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
 import ContactInformation from './ContactInformation';
 import ReservationDetails from './ReservationDetails';
 import MealCourse from './MealCourse';
@@ -14,52 +15,71 @@ const ReservationForm = ({ addReservation }) => {
     email: '',
     phone: '',
     specialRequest: '',
-    reservationDate: '', // Will be updated in ReservationDetails
+    reservationDate: '',
     time: '',
     partySize: '',
     mealCourse: null,
   });
 
-  const navigate = useNavigate(); // Initialize navigation
+  const [errorMessage, setErrorMessage] = useState('');
+  const [reservations, setReservations] = useState([]);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const storedReservations = JSON.parse(localStorage.getItem('activeReservations')) || [];
+    setReservations(storedReservations);
+  }, []);
 
   const nextStep = (data) => {
-    setReservationData((prevState) => ({
-      ...prevState,
-      ...data,
-    }));
+    const updatedData = { ...reservationData, ...data };
+
+    if (step === 1 && !isReservationValid(updatedData)) {
+      setErrorMessage('This reservation is not available. Please try a different slot.');
+      return;
+    }
+
+    setErrorMessage('');
+    setReservationData(updatedData);
     setStep(step + 1);
   };
 
-  const previousStep = () => {
-    setStep(step - 1);
+  const previousStep = () => setStep(step - 1);
+
+  const isReservationValid = (newReservation) => {
+    return !reservations.some(
+      (res) =>
+        res.reservationDate === newReservation.reservationDate &&
+        res.time === newReservation.time &&
+        res.partySize === newReservation.partySize
+    );
   };
 
   const handleConfirm = () => {
-    addReservation(reservationData); // Pass reservation data to the parent
-    setShowSuccessMessage(true); // Show success message
-    setTimeout(() => {
-      navigate('/'); // Redirect to the homepage after 3 seconds
-    }, 1000);
+    const newReservation = {
+      id: uuidv4(),
+      ...reservationData,
+    };
+
+    if (isReservationValid(newReservation)) {
+      const updatedReservations = [...reservations, newReservation];
+      localStorage.setItem('activeReservations', JSON.stringify(updatedReservations));
+      setShowSuccessMessage(true);
+      setTimeout(() => navigate('/'), 1000);
+    } else {
+      setErrorMessage('This slot is no longer available.');
+    }
   };
 
-  const handleEdit = () => {
-    setStep(1); // Restart the form if editing is needed
-  };
+  const handleEdit = () => setStep(1);
 
   return (
     <div className="reservation-form">
       {step === 1 && (
-        <ReservationDetails
-          nextStep={nextStep}
-          reservationData={reservationData} // Pass current reservation data to retain values
-        />
+        <ReservationDetails nextStep={nextStep} reservationData={reservationData} />
       )}
-      {step === 2 && (
-        <MealCourse nextStep={nextStep} previousStep={previousStep} />
-      )}
-      {step === 3 && (
-        <ContactInformation nextStep={nextStep} previousStep={previousStep} />
-      )}
+      {step === 2 && <MealCourse nextStep={nextStep} previousStep={previousStep} />}
+      {step === 3 && <ContactInformation nextStep={nextStep} previousStep={previousStep} />}
       {step === 4 && (
         <ConfirmationModal
           reservationData={reservationData}
@@ -68,11 +88,12 @@ const ReservationForm = ({ addReservation }) => {
         />
       )}
 
-      {/* Success message after confirmation */}
+      {errorMessage && <p className="error-message">{errorMessage}</p>}
+
       {showSuccessMessage && (
         <div className="success-message">
           <h2>Reservation Successful!</h2>
-          <p>Your reservation has been confirmed. Redirecting to the homepage...</p>
+          <p>Redirecting to the homepage...</p>
         </div>
       )}
     </div>

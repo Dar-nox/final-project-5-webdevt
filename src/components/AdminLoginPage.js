@@ -8,10 +8,10 @@ const AdminLoginPage = ({ setAuthenticated }) => {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    // Simple check for username and password (you can replace this with actual validation)
+    
     if (username === "admin" && password === "123") {
-      setAuthenticated(true); // Set authenticated to true
-      navigate("/admin"); // Redirect to Admin page
+      setAuthenticated(true); 
+      navigate("/admin"); 
     } else {
       alert("Invalid credentials");
     }

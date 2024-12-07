@@ -8,18 +8,18 @@ const ContactInformation = ({ nextStep }) => {
     const [specialRequest, setSpecialRequest] = useState('');
 
     const handleNext = (e) => {
-        e.preventDefault(); // Prevent default form submission behavior
+        e.preventDefault(); 
 
-        console.log({ name, email, phone }); // Debugging line
+        console.log({ name, email, phone }); 
 
-        // Use a simpler regex for phone number without spaces
-        const phoneRegex = /^09\d{9}$/; // Allow phone numbers in the form 09123456789
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email validation
+        
+        const phoneRegex = /^09\d{9}$/; 
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
 
-        // Check if the fields are valid
+        
         if (name && phoneRegex.test(phone) && emailRegex.test(email)) {
             const reservationDetails = { name, email, phone, specialRequest };
-            nextStep(reservationDetails); // Pass the reservation details to nextStep
+            nextStep(reservationDetails); 
         } else {
             alert('Please fill in all fields correctly.');
         }

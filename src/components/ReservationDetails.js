@@ -4,23 +4,22 @@ import 'react-calendar/dist/Calendar.css';
 import './styles/ReservationDetails.css';
 
 const ReservationDetails = ({ nextStep, reservationData }) => {
-  const [date, setDate] = useState(reservationData.reservationDate || new Date()); // Use reservationData if available
-  const [time, setTime] = useState(reservationData.time || ''); // Default to empty string if no time
-  const [partySize, setPartySize] = useState(reservationData.partySize || ''); // Default to empty string
+  const [date, setDate] = useState(reservationData.reservationDate || new Date());
+  const [time, setTime] = useState(reservationData.time || '');
+  const [partySize, setPartySize] = useState(reservationData.partySize || '');
 
   useEffect(() => {
-    // Update state when reservationData changes
     if (reservationData) {
       setDate(reservationData.reservationDate || new Date());
       setTime(reservationData.time || '');
       setPartySize(reservationData.partySize || '');
     }
-  }, [reservationData]); // Ensure this effect runs when reservationData is updated
+  }, [reservationData]);
 
   const handleNext = () => {
     if (date && time && partySize) {
       nextStep({
-        reservationDate: date,
+        reservationDate: date.toISOString().split('T')[0], // Format date to YYYY-MM-DD
         time,
         partySize,
       });

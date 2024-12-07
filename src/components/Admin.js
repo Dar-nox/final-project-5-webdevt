@@ -1,6 +1,13 @@
 import React from 'react';
 
 const Admin = ({ reservations, cancelReservation, updateReservation, markReservation }) => {
+    
+    const addOneDayToDate = (date) => {
+        const newDate = new Date(date); 
+        newDate.setDate(newDate.getDate() + 2); 
+        return newDate;
+    };
+
     return (
         <div>
             <h2>Admin Reservation Overview</h2>
@@ -29,7 +36,7 @@ const Admin = ({ reservations, cancelReservation, updateReservation, markReserva
                             <td>{reservation.mealCourse ? reservation.mealCourse.name : 'N/A'}</td>
                             <td>{reservation.specialRequest || 'N/A'}</td>
                             <td>{reservation.partySize}</td>
-                            <td>{reservation.reservationDate}</td>
+                            <td>{addOneDayToDate(reservation.reservationDate).toLocaleDateString()}</td>
                             <td>{reservation.status}</td>
                             <td>
                                 <button onClick={() => cancelReservation(reservation.id)}>Cancel</button>

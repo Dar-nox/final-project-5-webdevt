@@ -37,7 +37,7 @@ const MealCourse = ({ nextStep, previousStep }) => {
 
     const handleNext = () => {
         if (selectedCourse) {
-            nextStep({ mealCourse: selectedCourse }); // Pass the entire course object
+            nextStep({ mealCourse: selectedCourse }); 
         }
     };
 

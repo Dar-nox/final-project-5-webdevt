@@ -2,6 +2,13 @@ import React from 'react';
 import './styles/ConfirmationModal.css';
 
 const ConfirmationModal = ({ reservationData, onConfirm, onEdit }) => {
+  
+  const addOneDayToDate = (date) => {
+    const newDate = new Date(date); 
+    newDate.setDate(newDate.getDate() + 1); 
+    return newDate;
+  };
+
   return (
     <div className="confirmation-modal">
       <div className="modal-content">
@@ -9,7 +16,9 @@ const ConfirmationModal = ({ reservationData, onConfirm, onEdit }) => {
 
         <div className="section">
           <h3>Reservation Details</h3>
-          <p><strong>Date:</strong> {reservationData.reservationDate.toLocaleDateString()}</p>
+          <p>
+            <strong>Date:</strong> {addOneDayToDate(reservationData.reservationDate).toLocaleDateString()}
+          </p>
           <p><strong>Time:</strong> {reservationData.time}</p>
           <p><strong>Party Size:</strong> {reservationData.partySize}</p>
         </div>
